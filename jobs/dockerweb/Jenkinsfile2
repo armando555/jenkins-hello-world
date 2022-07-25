@@ -11,6 +11,14 @@ pipeline {
         name_final = "${name_container}${tag_imagen}${puerto_imagen}"        
     }
     stages {
+             stage("paso 1"){
+            
+          steps {
+              script {			
+               sh "echo 'hola mundo'"
+            }
+          }
+            }
           stage('stop/rm') {
 
             when {
