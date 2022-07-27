@@ -14,7 +14,7 @@ pipeline {
      
       steps {
           script {			
-           sh "whoami"
+           bat "python --version"
         }
       }
     }
@@ -22,14 +22,14 @@ pipeline {
   post {
       always {          
           deleteDir()
-           sh "echo 'fase always'"
+           bat "echo 'fase always'"
       }
       success {
-            sh "echo 'fase success'"
+            bat "echo 'fase success'"
         }
 
       failure {
-            sh "echo 'fase failure'"
+            bat "echo 'fase failure'"
       }
       
   }
