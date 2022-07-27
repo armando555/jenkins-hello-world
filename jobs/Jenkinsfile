@@ -14,7 +14,7 @@ pipeline {
      
       steps {
           script {			
-           sh "python --version"
+           sh "whoami"
         }
       }
     }
